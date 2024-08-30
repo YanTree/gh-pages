@@ -360,14 +360,14 @@ body {
 }
 
 #main-content-container .journal.page h1.title:before {
-    content: "🗓";
+    content: "📅";
     vertical-align: text-bottom;
     margin-right: .3em;
     font-size: .75em
 }
 
 #main-content-container .is-journals h1.page-title:before {
-    content: "🗓";
+    content: "📅";
     vertical-align: text-bottom;
     margin-right: .3em;
     font-size: .75em;
