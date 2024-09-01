@@ -13,9 +13,9 @@
   
   .white-theme,
   html[data-theme=light] {
-      --bf-codeblock-background-color: #F0F0F2;
-      --bf-external-link-color: #ea6e6e;
-      --bf-external-link-hover-color: #e6515e;
+      --bf-codeblock-background-color: #F8F8FA;
+      --bf-external-link-color: #467bde;
+      --bf-external-link-hover-color: #3a6ec6;
       --bf-tag-background-color: var(--lx-accent-10);
       --bf-query-clause-border-color: var(--lx-accent-06);
       --bf-query-clause-background-color: #8fc3ff15;
@@ -31,8 +31,8 @@
   .dark-theme,
   html[data-theme=dark] {
       --bf-codeblock-background-color: #313238;
-      --bf-external-link-color: #e86e6e;
-      --bf-external-link-hover-color: #f29191;
+      --bf-external-link-color: #6abbf8;
+      --bf-external-link-hover-color: #a6d4fe;
       --bf-query-clause-border-color: var(--lx-accent-06);
       --bf-query-clause-background-color: #2f82c615;
       --bf-query-clause-background-hover-color: #2f82c633;
@@ -137,7 +137,8 @@
       --ls-block-bullet-border-color: #00000015;
       --ls-block-bullet-color: #c7c7c7;
       --ls-guideline-color: #00000024;
-      --ls-page-inline-code-bg-color: rgba(135, 131, 120, 0.15);
+      --ls-page-inline-code-color: #202020;
+      --ls-page-inline-code-bg-color: rgba(225, 225, 228, 1.0);
       --ls-page-blockquote-color: var(--ls-primary-text-color);
       --ls-page-blockquote-border-color: var(--ls-primary-text-color);
       --ls-page-checkbox-color: var(--rx-logseq-07);
@@ -206,8 +207,8 @@
       --ls-page-checkbox-border-color: var(--ls-primary-background-color);
       --ls-page-blockquote-color: var(--ls-primary-text-color);
       --ls-page-blockquote-border-color: var(--ls-primary-text-color);
-      --ls-page-inline-code-color: #eb5757;
-      --ls-page-inline-code-bg-color: rgba(135, 131, 120, 0.15);
+      --ls-page-inline-code-color: #d4d4d4;
+      --ls-page-inline-code-bg-color: rgba(81, 81, 86, 1.0);
       --ls-selection-background-color: #3e3e41;
       --ls-block-highlight-color: #3e3e41;
       --ls-icon-color: #b5b5b5;
@@ -249,10 +250,6 @@
   
   body {
       background-color: var(--ls-primary-background-color)
-  }
-  
-  .block-properties {
-    font-size: small;
   }
   
   .cp__header {
@@ -419,7 +416,10 @@
       background-color: var(--lx-accent-11)
   }
   
-  .content .block-properties,
+  .content .block-properties {
+      font-size: small;
+  }
+
   .content .page-properties {
       margin: 8px 0;
       padding: 10px 20px;
@@ -525,13 +525,13 @@
       text-decoration: unset
   }
   
-  .content a.external-link {
+  /* .content a.external-link {
       color: var(--bf-external-link-color)
   }
   
   .content a.external-link:hover {
       color: var(--bf-external-link-hover-color)
-  }
+  } */
   
   .content .block-ref {
       border-radius: 3px;
@@ -572,7 +572,7 @@
       font-family: SFMono-Regular, "Maple Mono SC NF", Consolas, Monaco, Menlo, Consolas, "COURIER NEW", monospace;
       padding: 2px 6px !important;
       margin: 0 1px;
-      color: #eb5757;
+      color: var(--ls-page-inline-code-color);
       background-color: var(--ls-page-inline-code-bg-color)
   }
   
@@ -1223,10 +1223,14 @@
   /* Tabler Icon:  https://tabler.io/icons */
   .page-property-key[data-ref|="public"]::before      { content: "\eb28" }
   .page-property-key[data-ref|="date"]::before        { content: "\ea53" }
+  .page-property-key[data-ref|="alias"]::before       { content: "\edb4" }
   .page-property-key[data-ref|="icon"]::before        { content: "\f1d4" }
   .page-property-key[data-ref|="author"]::before      { content: "\eb4d" }
   .page-property-key[data-ref|="tags"]::before        { content: "\ef86" }
   .page-property-key[data-ref|="categories"]::before  { content: "\f1f6" }
-  .page-property-key[data-ref|="description"]::before { content: "\f028" }
-  .page-property-key[data-ref|="template"]::before    { content: "\eb39" }
+  .page-property-key[data-ref|="description"]::before { content: "\ea08" }
+  .page-property-key[data-ref|="template"]::before    { content: "\ed52" }
+  .page-property-key[data-ref|="exclude-from-graph-view"]::before    { content: "\ebdb" }
+
+  .page-property-key[data-ref|="excalidraw-plugin"]::before          { content: "\eb04" }
   
